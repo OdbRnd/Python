@@ -1,0 +1,42 @@
+# Списки
+
+# Задание # 1
+N = int(input("Введите кол-во  элементов массива: "))
+aMas = []
+for i in range(N):
+    nTmp = int(input("Введите чиcло: "))
+    aMas.append(nTmp)
+print(*aMas)
+aMas.reverse()
+print(*aMas)
+
+# Задание # 2
+N = int(input("Введите кол-во элементов массива: "))
+aMas = list(map(int, input("Введите числа строкой: ").split()))
+
+while len(aMas) != N:
+    print("Введите кол-во элементо = ", N)
+    aMas.clear()
+    aMas = list(map(int, input("Введите числа строкой: ").split()))
+
+nTmp = aMas[-1]
+aMas.insert(0, nTmp)
+aMas.pop(-1)
+print(*aMas)
+
+# Задание # 3
+from math import ceil
+
+nBoat = int(input("Макс. масса груза для перевозки в лодке: "))
+nFish = int(input("Введите кол-во рыбаков: "))
+aWeight = []
+nCount = 0 
+for i in range(nFish):
+    nTmp = int(input("Введите вес рыбака: "))
+    aWeight.append(nTmp)
+# определяем смуммарный вес всех рыбаков
+nWeight = 0
+for i in aWeight:
+    if i > 0:
+       nWeight += i
+print("Общий вес рыбаков: ", nWeight, ". Кол-во лодок: ", ceil(nWeight/nBoat)," шт.")
