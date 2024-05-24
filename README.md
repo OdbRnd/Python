@@ -8,3 +8,4 @@ Lesson_4: Циклы While & For
 Lesson_5: Списки
 Lesson_6: Строки
 Lesson_7: Множества
+Lesson_8: Словари.
